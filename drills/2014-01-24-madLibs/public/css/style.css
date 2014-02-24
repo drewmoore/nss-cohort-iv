@@ -1,0 +1,9 @@
+.word-square {
+  border: 1px dotted black;
+  display: inline;
+  margin: 3px;
+}
+#squares-div {
+  border: 2px solid black;
+  display: inline-block;
+}

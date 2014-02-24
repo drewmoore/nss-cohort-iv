@@ -1,0 +1,30 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Weather and Road Conditions
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/lodash.js')
+    script(src='/js/source/main.js')
+  body
+    #container
+      #user
+        span#input
+          input#zip-box(type='text', placeholder='type a zip...', autofocus)
+          button#add-zip Add Zip
+          select#zip-menu(name='Choose Zip')
+            option(value='') -- Select a Zipcode --
+        #heading 
+          h1 Weather and Road Webcams
+        span#action
+          button#get-webcam Get Webcams
+          button#clear Clear
+
+      #display
+

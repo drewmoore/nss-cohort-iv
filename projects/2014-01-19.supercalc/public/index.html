@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SuperCalc</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="calculator">
+        <div id="face">
+          <div id="answer">
+          </div>  
+          <div id="main">
+            <div id="keypad">
+              <span>
+                <input type="button" id="n7" class="numbers" value="7">
+                <input type="button" id="n8" class="numbers" value="8">
+                <input type="button" id="n9" class="numbers" value="9">
+
+                <input type="button" id="add" class="operator" value="+">
+              </span>
+              <span>
+                <input type="button" id="n4" class="numbers" value="4">
+                <input type="button" id="n5" class="numbers" value="5">
+                <input type="button" id="n6" class="numbers" value="6">
+
+                <input type="button" id="sub" class="operator" value="-">
+              </span>
+              <span>
+                <input type="button" id="n1" class="numbers" value="1">
+                <input type="button" id="n2" class="numbers" value="2">
+                <input type="button" id="n3" class="numbers" value="3">
+
+                <input type="button" id="mul" class="operator" value="*">
+              </span>
+              <span>
+                <input type="button" id="n0" class="numbers" value="0">
+                <input type="button" id="dec" class="numbers" value=".">
+                <input type="button" id="push" value="&#8611">
+
+                <input type="button" id="div" class="operator" value="&divide;">
+              </span>
+              <span>
+                <input type="button" id="sum" class="operator" value="&Sigma;">
+                <input type="button" id="pow" class="operator" value="x^y">
+          
+                <input type="button" id="clear" class="buttons" value="clear">
+                <input type="button" id="plusMinus" value="+/-">
+              </span>
+            </div>
+            <div id="queue-box">
+              <ul id="queue">
+              </ul>
+            </div>
+          </div>
+        </div>  
+        <div id="instruct">
+          <p>
+          Press a number, push <em>&#8611</em> to load it into the queue. Select your operation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

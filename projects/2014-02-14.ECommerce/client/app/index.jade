@@ -1,0 +1,62 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Gadget Express
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/foundation.css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+  body
+    .row
+      .small-12.columns
+        h1 Gadget Express
+    .row#user-workbox
+      .small-2.columns
+        label Username
+        input#username-input(type='text' name='username')
+        label Deposit
+        input#deposit-input(type='text', name='deposit')
+        button.expand.tiny.radius#create-user Create User
+      .small-10.columns
+        table#user-info
+          thead
+            th User
+            th Balance
+            th Purchases
+          tbody
+    .row#gadget-workbox
+      .small-2.columns
+        label Gadget Name
+        input#gadgetname-input(type='text', name='gadgetname')
+        label Price
+        input#gadgetprice-input(type='text', name='gadgetprice')
+        label Quantity
+        input#gadgetquantity-input(type='text', name='gadgetquantity')
+        button.expand.tiny.radius#create-gadget Create Gadget
+      .small-8.columns
+        table#gadget-info
+          thead
+            th
+            th Gadget
+            th Price
+            th Quantity
+          tbody
+      .small-2.columns
+        label What to Buy?
+        input#thing-to-buy(type='text')
+        label Who's Buying?
+        select#user-menu
+        label How Many?
+        select#quantity-menu
+        button.expand.tiny.radius#finalize-purchase Finalize Purchase
+        div.hide#error
+          strong Your order sucks. <br> Try Again!
+
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/foundation.js')
+    script(src='/js/vendor/lodash.js')
+    script(src='/js/source/main.js')
+

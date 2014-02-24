@@ -1,0 +1,27 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Foundation 5
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/foundation.css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+  body
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/foundation.js')
+    script(src='/js/source/main.js')
+    script $(document).foundation();
+
+    h1 Exponential Growth
+
+    input#exponent-box(type=text)
+    input#delay-box(type=text)
+    button#grow Grow It!
+
+    #container
+      ul Watch it grow!
+        li 2
+

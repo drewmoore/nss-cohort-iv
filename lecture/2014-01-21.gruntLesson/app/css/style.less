@@ -1,0 +1,12 @@
+@primary: #ff0000;
+@secondary: #00ff00;
+
+h1{
+  background-color: @primary;
+  color: @secondary;
+  border: 5px dashed secondary;
+}
+
+h2{
+  background-color: desaturate(@primary, 40%);
+}

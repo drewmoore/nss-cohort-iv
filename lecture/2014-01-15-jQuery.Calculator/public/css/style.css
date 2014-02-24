@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
+
+p{
+  font-size: 30px;
+}
+
+.alert{
+  background-color: red;
+
+}
+
+.success{
+  background-color: green;
+}
+
+.button {
+  border: 5px;
+  border-color: rgb(100,100,100,.5);
+  border-radius: 10px;
+}
+

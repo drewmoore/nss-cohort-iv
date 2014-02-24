@@ -1,0 +1,10 @@
+#images-div {
+  border: 2px dotted black;
+  width: 700px;
+  height: 500px;
+}
+.new-image-div {
+  border: 1px dotted black;
+  width: 350px;
+  height: 350px;
+}

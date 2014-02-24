@@ -1,0 +1,7 @@
+#bacon {
+  background: url('http://www.stupid.com/assets/images/bacon-tie-9.jpg') repeat;
+}
+li {
+  border: 5px dotted red;
+  background-color: rgba(100, 30, 20, 0.5);
+}

@@ -1,0 +1,49 @@
+body {
+  background-color: #445633;
+  color: black;
+}
+label {
+  color: black;
+  margin: 4px;
+  padding: 2px;
+}
+input {
+  margin: 4px;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+  overflow: scroll;
+}
+#user-info {
+  max-height: 300px;
+  overflow: auto;
+}
+#user-workbox {
+  height: 300px;
+}
+#gadget-workbox {
+  height: 300px;
+}
+#gadget-info {
+  max-height: 300px;
+  overflow: auto;
+}
+#error {
+  background-color: white;
+  margin: 5px auto;
+  padding: 2px;
+}
+thead {
+  text-align: center;
+}
+th td {
+  border: 2px, solid, black;
+  padding: 2px;
+}
+#finalize-purchase {
+  margin-bottom: 0px;
+}
+h1 {
+  text-align: center;
+}

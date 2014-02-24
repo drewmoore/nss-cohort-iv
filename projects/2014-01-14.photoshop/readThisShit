@@ -1,0 +1,2 @@
+put app.js and package.json in website's directory. i.e. "supercalc"
+put public directory in "supercalc" or whatever for your index.html and everything
