@@ -1,0 +1,88 @@
+@bg-color: #444444;
+
+body{
+  background-color: black;
+  background-image: url(/img/grey.png);
+  background-position: center;
+}
+
+#hourglass-column{
+  //width: 50px;
+  min-height: 550px;
+  position: relative;
+}
+
+#hourglass{
+  background-image: url(/img/statusbar.png);
+  background-repeat: no-repeat;
+  width: 45px;
+  min-height: 550px;
+
+  position: absolute;
+  bottom: 0px;
+  z-index: +2;
+}
+
+#sand{
+  max-width: 30px;
+  //min-height: 550px;
+  background-color: rgba(150, 0, 75, .6);
+  position: absolute;
+  bottom: 0px;
+  z-index: +1;
+}
+
+#black{
+  max-width: 30px;
+  min-height: 550px;
+  background-color: black;
+
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+}
+
+#gameboard{
+  background-color: rgba(0,0,0,0);
+  background-image: url(/img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 700px;
+  width: 900px;
+  padding: 50px;
+}
+
+#gameboard > div > div {
+  width: 100px;
+  height: 30px;
+}
+
+.gameboard-square{
+  background-color: rgba(150, 0, 75, .6);
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 8px auto;
+  color: rgba(250, 190, 20, 1);
+}
+
+.clicked{
+  background-color: rgba(0, 0, 0, .7);
+  color: rgba(250, 190, 20, .9);
+}
+
+.flag{
+  margin: 8px auto;
+}
+
+h1{
+  text-align: center;
+  margin: 10px auto;
+  color: rgba(255, 190, 20, .9);
+}
+
+h5{
+  text-align: center;
+  margin: 5px auto;
+  color: rgba(255, 190, 20, .9);
+}

@@ -7,6 +7,7 @@
   function initialize(){
     $(document).foundation();
     $('#add-song').click(addSong);
+    $('#search-form').find('legend').click(showSearchForm);
     $('#search-song').click(searchSong);
     $('#cancel-edits').click(cancelEdits);
     $('#submit-edits').click(submitEdits);
@@ -41,11 +42,10 @@
 
       $div.addClass('icons');
       $div.addClass('edit');
-      $div.css('background-image', 'url(/media/edit.png)');
+      //$div.css('background-image', 'url(/media/edit.png)');
       $div2.addClass('icons');
       $div2.addClass('delete');
-      $div2.css('background-image', 'url(/media/delete.png)');
-
+      //$div2.css('background-image', 'url(/media/delete.png)');
 
       $td3.append($div);
       $td3.append($div2);
@@ -55,7 +55,25 @@
       $('#song-table > tbody').append($tr);
     }
 
+    $('#song-table > tbody > tr').on('mouseover', showIcons);
+    $('#song-table > tbody > tr').on('mouseout', hideIcons);
     $('.icons').on('click', clickIcon);
+  }
+
+  function showIcons(){
+    var $edit = $(this).find('.edit');
+    var $delete = $(this).find('.delete');
+    $(this).addClass('highlighted');
+    $edit.css('background-image', 'url(/media/edit.png)');
+    $delete.css('background-image', 'url(/media/delete.png)');
+  }
+
+  function hideIcons(){
+    var $edit = $(this).find('.edit');
+    var $delete = $(this).find('.delete');
+    $(this).removeClass('highlighted');
+    $edit.css('background-image', '');
+    $delete.css('background-image', '');
   }
 
   function addSong(event){
@@ -73,6 +91,11 @@
     var songs = [];
     songs.push(song);
     fillTable(songs);
+  }
+
+  function showSearchForm(event){
+    event.preventDefault();
+    console.log('showSearchForm called');
   }
 
   function searchSong(event){
@@ -161,7 +184,6 @@
       $('#delete-form').addClass('visible');
     }
     $('#delete-message').attr('data-id', id);
-    console.log('deleteSong called, toDelete: ', toDelete, id);
   }
 
   function cancelDelete(event){

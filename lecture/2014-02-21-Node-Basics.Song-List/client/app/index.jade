@@ -13,15 +13,16 @@ html(class='no-js', lang='en')
     .row
       .small-12.columns
         h1 My Favorite Songs
+        h5 Hey visitor. Add your favorite songs to the list. See what everyone else likes.
     .row
       .row
-        .small-3.columns
+        .small-2.columns
           form#song-form
             fieldset
               legend Add a Song
               .row
                 .small-12.columns
-                  label Name
+                  label Title
                     input(type='text', name='name', autofocus=true)
               .row
                 .small-12.columns
@@ -32,14 +33,14 @@ html(class='no-js', lang='en')
                   button.expand.radius.tiny#add-song Add Song
           form#search-form
             fieldset
-              legend Search
+              legend Filter List
               .row
-                .small-12.columns#search-fields
-                  label Put in an artists' name
+                .small-12.columns.hide#search-fields
+                  label by Artist
                     input(type='text', name='search')
               .row
                 .small-12.columns
-                  button.expand.radius.tiny#search-song Look it Up
+                  button.expand.radius.tiny.hide#search-song Do It
           form.hide#edit-form
             fieldset
               legend Edit a Song's Info
@@ -63,7 +64,7 @@ html(class='no-js', lang='en')
                   textarea#delete-message Are you sure you want to delete this song from this totally awesome database? It will be lost forever...
                   button.expand.radius.tiny#cancel-delete Nevermind
                   button.expand.radius.tiny#submit-delete Really Delete
-        .small-9.columns
+        .small-10.columns
           table#song-table
             thead
               th Title
