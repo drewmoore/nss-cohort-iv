@@ -1,4 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Concert+One);
+
 @bg-color: #444444;
+
+@font-face {
+  font-family:"Caslon";
+  src: url("cas.ttf") /* TTF file for CSS3 browsers */
+}
 
 body{
   background-color: black;
@@ -12,14 +19,17 @@ body{
   position: relative;
 }
 
+.timepiece{
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+}
+
 #hourglass{
   background-image: url(/img/statusbar.png);
   background-repeat: no-repeat;
   width: 45px;
   min-height: 550px;
-
-  position: absolute;
-  bottom: 0px;
   z-index: +2;
 }
 
@@ -27,19 +37,8 @@ body{
   max-width: 30px;
   //min-height: 550px;
   background-color: rgba(150, 0, 75, .6);
-  position: absolute;
-  bottom: 0px;
+  background-image: url(/img/sand.jpg);
   z-index: +1;
-}
-
-#black{
-  max-width: 30px;
-  min-height: 550px;
-  background-color: black;
-
-  position: absolute;
-  bottom: 0px;
-  z-index: 0;
 }
 
 #gameboard{
@@ -71,18 +70,30 @@ body{
   color: rgba(250, 190, 20, .9);
 }
 
+.name{
+  font-family: 'Concert One';
+  font-size: 12px;
+  font-weight: 400;
+  margin: 3px auto;
+}
+
 .flag{
   margin: 8px auto;
 }
 
 h1{
+  font-family:'Caslon';
+  font-size: 2em;
+  font-weight: 800;
   text-align: center;
-  margin: 10px auto;
+  margin: 2px auto;
   color: rgba(255, 190, 20, .9);
 }
 
 h5{
+  font-family:'Caslon';
+  font-weight: 600;
   text-align: center;
-  margin: 5px auto;
+  margin: 0px auto;
   color: rgba(255, 190, 20, .9);
 }

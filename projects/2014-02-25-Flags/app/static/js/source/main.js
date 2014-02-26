@@ -8,7 +8,7 @@
   var flagClicked;
   var lastClick;
   var timer;
-  var maxTime = 10000;
+  var maxTime = 20000;
   var timeCount = 0;
   var interval;
 
@@ -101,6 +101,7 @@
     });
 
     $p.text(nameClicked);
+    $p.addClass('name');
     $p2.addClass('flag flag-'+flagClicked);
     $div.append($p);
     $div2.append($p2);

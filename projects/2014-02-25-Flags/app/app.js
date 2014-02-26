@@ -8,8 +8,16 @@ var f4 = {country:'Italy', flag:'it'};
 var f5 = {country:'France', flag:'fr'};
 var f6 = {country:'Andorra', flag:'ad'};
 var f7 = {country:'Afghanistan', flag:'af'};
+var f8 = {country:'Burundi', flag:'br'};
+var f9 = {country:'Czech Republic', flag:'cz'};
+var f10 = {country:'Uzbekistan', flag:'uz'};
+var f11 = {country:'Tajikistan', flag:'tj'};
+var f12 = {country:'Sri Lanka', flag:'lk'};
+var f13 = {country:'Uruguay', flag:'uy'};
+var f14 = {country:'Switzerland', flag:'ch'};
+var f15 = {country:'South Africa', flag:'za'};
 
-global.flags = [f1, f2, f3, f4, f5, f6, f7];
+global.flags = [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15];
 /* end answers */
 
 var dbname = process.env.DBNAME;

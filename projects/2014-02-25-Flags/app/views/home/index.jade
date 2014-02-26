@@ -17,12 +17,12 @@ html(class='no-js', lang='en')
         h5 Test your geography skills. Match the countries and their flags.
     .row#gameboard
       .small-2.columns#hourglass-column
-        #sand
-        #hourglass
+        #sand.timepiece
+        #hourglass.timepiece
       .small-3.columns#gameboard-names
         each c in countries
           .gameboard-square.name-square
-            p= c.country
+            p.name= c.country
       .small-2.columns#gameboard-flags
         each f in flags
           .gameboard-square.flag-square
