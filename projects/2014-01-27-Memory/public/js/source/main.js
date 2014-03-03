@@ -48,7 +48,6 @@
       if(beforeLastClick.assigned !== -2){
         $(beforeLastClick).css('background-image', 'url(/media/question.jpg');
       }
-    
     }
 
     $(this).css('background-image', 'url(/media/'+images[adjust(this.assigned)]+')');
@@ -64,6 +63,8 @@
         lastClick.assigned = -2;
         $(this).removeClass('square');
         $(lastClick).removeClass('square');
+        console.log('right answer');
+        debugger;
       }
       changeScore(guessRight);
     }
@@ -103,7 +104,7 @@
         $newTd.assigned = randomize();
         //$newTd.text($newTd.assigned);
         $newTd.addClass('square');
-        $newTd.css('backgroundImage', 'url:(media/question.jpg)');
+        $newTd.css('background-image', 'url:(/media/question.png)');
         $newTr.append($newTd);
         $('td')[$('td').length -1].assigned = $newTd.assigned;
         assignedNumbers.push($newTd.assigned);
