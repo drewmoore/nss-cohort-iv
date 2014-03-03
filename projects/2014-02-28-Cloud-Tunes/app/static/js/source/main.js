@@ -13,6 +13,7 @@
     $('.play').on('click', play);
     $('.pause').click(pause);
     $('.stop').click(stop);
+    $('#time-display').click(timeAdjust);
 
     clearInterval(timer);
     clearInterval(songProgressTimer);
@@ -52,10 +53,15 @@
 
   function stop(){
     var $playPause = $('#play-pause');
+    var $timeProgress = $('#time-progress');
+
     songSelected.load();
     clearInterval(timer);
     clearInterval(songProgressTimer);
+    timeProgressAnimation();
     resetTimeElapsed();
+    $timeProgress.css('clip', 'rect(0px, 0px, 0px, 0px)');
+
     if($playPause.hasClass('pause')){
       $playPause
         .removeClass('pause')
@@ -64,6 +70,7 @@
         .on('click', play)
         .text('Play');
     }
+    console.log('stop called: ', songSelected.currentTime);
   }
 
   function timerFunction(){
@@ -89,17 +96,18 @@
     var timePercentage = currentTime / duration;
     var $timeProgress = $('#time-progress');
     var $timeBar = $('#time-bar');
-    var currentWidth = $timeProgress.css('width').split('p')[0] * 1;
+    //var currentWidth = $timeProgress.css('width').split('p')[0] * 1;
     var totalWidth = $timeBar.css('width').split('p')[0] *1;
     var fillPercentage = totalWidth * timePercentage;
     //var currentHeight = $timeProgress.css('height').split('p')[0] * 1;
     var totalHeight = $timeBar.css('height').split('p')[0] *1;
-    var heightPercentage = totalHeight * timePercentage;
+    //var heightPercentage = totalHeight * timePercentage;
+    var clipString = 'rect( 0px, '+ fillPercentage +'px, ' + totalHeight +'px, '+ '0px)';
 
-    $timeProgress.css('height', heightPercentage);
-    $timeProgress.css('width', fillPercentage);
+    //$timeProgress.css('height', heightPercentage);
+    $timeProgress.css('clip', clipString);
 
-    console.log('time animation thing: ', duration, currentTime, timePercentage, currentWidth, totalWidth, fillPercentage, $timeProgress.css('height'));
+    //console.log('time animation thing: ', duration, currentTime, timePercentage, currentWidth, totalWidth, fillPercentage, $timeProgress.css('height'));
   }
 
   function getProgressInterval(){
@@ -146,6 +154,20 @@
 
   function resetTimeElapsed(){
     $('#time-elapsed').text('00:00');
+  }
+
+  function timeAdjust(){
+    var $timeBar = $('#time-bar');
+    var totalWidth = $timeBar.css('width').split('p')[0] *1;
+    var position = event.offsetX;
+    var percentage = position / totalWidth;
+    var duration = songSelected.duration;
+    var newTime = duration * percentage;
+
+    songSelected.currentTime = newTime;
+    timeProgressAnimation();
+
+    console.log('adjustTime: ', totalWidth, position, percentage, duration, newTime);
   }
 
 })();
