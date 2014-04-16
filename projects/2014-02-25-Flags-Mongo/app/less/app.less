@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Concert+One);
+
+@bg-color: #444444;
+
+@font-face {
+  font-family:"Caslon";
+  src: url("cas.ttf") /* TTF file for CSS3 browsers */
+}
+
+body{
+  background-color: black;
+  background-image: url(/img/grey.png);
+  background-position: center;
+}
+
+#hourglass-column{
+  //width: 50px;
+  min-height: 550px;
+  position: relative;
+}
+
+.timepiece{
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+}
+
+#hourglass{
+  background-image: url(/img/statusbar.png);
+  background-repeat: no-repeat;
+  width: 45px;
+  min-height: 550px;
+  z-index: +2;
+}
+
+#sand{
+  max-width: 30px;
+  //min-height: 550px;
+  background-color: rgba(150, 0, 75, .6);
+  background-image: url(/img/sand.jpg);
+  z-index: +1;
+}
+
+#gameboard{
+  background-color: rgba(0,0,0,0);
+  background-image: url(/img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 700px;
+  width: 900px;
+  padding: 50px;
+}
+
+#gameboard > div > div {
+  width: 100px;
+  height: 30px;
+}
+
+.gameboard-square{
+  background-color: rgba(150, 0, 75, .6);
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 8px auto;
+  color: rgba(250, 190, 20, 1);
+}
+
+.clicked{
+  background-color: rgba(0, 0, 0, .7);
+  color: rgba(250, 190, 20, .9);
+}
+
+.name{
+  font-family: 'Concert One';
+  font-size: 12px;
+  font-weight: 400;
+  margin: 3px auto;
+}
+
+.flag{
+  margin: 8px auto;
+}
+
+h1{
+  font-family:'Caslon';
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  margin: 2px auto;
+  color: rgba(255, 190, 20, .9);
+}
+
+h5{
+  font-family:'Caslon';
+  font-weight: 600;
+  text-align: center;
+  margin: 0px auto;
+  color: rgba(255, 190, 20, .9);
+}
